@@ -21,11 +21,12 @@ body {
   grid-gap: 1em;
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
 
-  & > a {
+  & > div > a {
     text-decoration: none;
+    color: inherit;
   }
 
-  & > a > div {
+  & > div {
     background-color: white;
     height: 100px;
     border-radius: 1rem;
@@ -35,8 +36,24 @@ body {
     background-size: 300%;
     background-position: center;
     display: flex;
-    align-items: center;
-    justify-items: center;
+    flex-direction: column;
     text-shadow: 1px 1px #121212;
+
+    & * {
+      height: 50px;
+    }
+
+    & .icon-wrap {
+      position: relative;
+      width: 100%;
+      & a {
+        position: absolute;
+        cursor: pointer;
+        bottom: -35px;
+        right: 0;
+        z-index: 100;
+        color: white;
+      }
+    }
   }
 }
