@@ -22,17 +22,17 @@ export default class Video extends Component {
               <div>
                 <p>{removeMozilla(this.props.video.snippet.title)}</p>
               </div>
-              <div className='icon-wrap'>
-                <a
-                  className='icon-div'
-                  href={getHubsLink(this.props.video.snippet.description)}
-                  target='_blank'
-                >
-                  <i className='fas fa-vr-cardboard'></i>
-                </a>
-              </div>
             </div>
           </a>
+          <div className='icon-wrap'>
+            <a
+              className='icon-div'
+              href={getHubsLink(this.props.video.snippet.description)}
+              target='_blank'
+            >
+              <i className='fas fa-vr-cardboard'></i>
+            </a>
+          </div>
         </div>
       </Fragment>
     );
